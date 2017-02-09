@@ -10,7 +10,11 @@ namespace VariableAndExpression
     {
         static void Main(string[] args)
         {
-            
+            int myInt = 10;
+            string myStr = "test";
+            //原生支持占位符
+            Console.WriteLine("{0},{1}", myInt, myStr);
+            Console.ReadKey();
         }
     }
 }
