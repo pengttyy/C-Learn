@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using super.smashing;
 
 namespace VariableAndExpression
 {
@@ -42,8 +43,22 @@ namespace VariableAndExpression
             //=,*=,/=,%=,+=,-=
             //++,--用作后缀
 
-
             Console.ReadKey();
         }
+    }
+}
+
+//namespace相当于java中的package
+//using 则相当于java中的import
+namespace fabulous {
+    class Test2 {
+        Test t;
+    }
+    
+}
+
+namespace super {
+    namespace smashing {
+        class Test { }
     }
 }
