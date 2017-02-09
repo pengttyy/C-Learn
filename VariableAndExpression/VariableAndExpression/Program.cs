@@ -35,6 +35,13 @@ namespace VariableAndExpression
             Console.WriteLine("一元操作符\"-\"var1的值{0}，var2的值{1} 赋值乘以-1", var3, var4);
 
             //赋值操作符=、+=、-=、*=、/=、%=
+            //操作符优先级
+            //用作前缀 ++、--、+、-
+            //*、/、%
+            //+、-
+            //=,*=,/=,%=,+=,-=
+            //++,--用作后缀
+
 
             Console.ReadKey();
         }
