@@ -43,6 +43,18 @@ namespace VariableAndExpression
             //=,*=,/=,%=,+=,-=
             //++,--用作后缀
 
+            //练习题--运算符优先级
+            int var11 = 1, var12 = 2, var13 = 3, var14 = 4,var15=5, resultVar=0;
+            resultVar += var11 * var12 + var13 % var14 / var15;
+
+            /*
+                1.var11*var12
+                2.var13%var14/var15
+                3.step1+step2
+                4.resultVar = resultVar+step3
+            */
+
+            Console.WriteLine("resultVal={0}",resultVar);
             Console.ReadKey();
         }
     }
