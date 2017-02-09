@@ -20,6 +20,12 @@ namespace VariableAndExpression
             sbyte mysbyte;
             bool mybool;
             //Console.Write(mybool); 与java不同基本类型必须初始化
+
+            myStr = @"一成不变的
+                显示字符串,类似于<pre>";
+            Console.WriteLine(myStr);
+
+            Console.ReadKey();
         }
     }
 }
