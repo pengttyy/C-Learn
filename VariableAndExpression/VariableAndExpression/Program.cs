@@ -15,6 +15,11 @@ namespace VariableAndExpression
             //原生支持占位符
             Console.WriteLine("{0},{1}", myInt, myStr);
             Console.ReadKey();
+
+            //变量默认值
+            sbyte mysbyte;
+            bool mybool;
+            //Console.Write(mybool); 与java不同基本类型必须初始化
         }
     }
 }
