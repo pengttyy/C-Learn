@@ -16,6 +16,14 @@ namespace VariableAndExpression
         two,
         three
     }
+
+    /*
+    复杂数据类型之结构
+    */
+    struct route {
+        public firstEnum enumVal;
+        public double distance;
+    }
     class Program
     {
         static void Main(string[] args)
@@ -103,6 +111,12 @@ namespace VariableAndExpression
             firstEnum firstEnumTwo = (firstEnum)Enum.Parse(typeof(firstEnum), "two");
             Console.WriteLine("将string转为枚举值{0}",firstEnumTwo);
 
+            //使用结构数据类型
+            route myRoute;
+            myRoute.distance = 10;
+            myRoute.enumVal = firstEnum.three;
+
+            Console.WriteLine("使用结构数据类型enumValue:{0},distance:{1}", myRoute.enumVal,myRoute.distance);
         }
     }
 }
