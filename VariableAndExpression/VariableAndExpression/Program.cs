@@ -66,6 +66,28 @@ namespace VariableAndExpression
 
             Console.WriteLine("resultVal={0}",resultVar);
             Console.ReadKey();
+
+            /*
+            显示转换与隐式转换
+                隐式转换小字段与大字段运算，自动转成大的字段类型
+                显示转换与java类似，（强制类型）变量或使用转换函数
+            */
+
+            /*
+            checked(expression)与unchecked(expression)
+            */
+
+            byte byteVar;
+            long longVar = 300;
+
+            byteVar = unchecked((byte)longVar);
+            Console.WriteLine("默认为unchecked,输出值为44，二进制高位丢失{0}", byteVar);
+
+            byteVar = checked((byte)longVar);
+            Console.WriteLine("System.OverflowException:算术运算导致溢出！{0}",byteVar);
+
+
+
         }
     }
 }
