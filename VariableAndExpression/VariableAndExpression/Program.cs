@@ -7,6 +7,15 @@ using super.smashing;
 
 namespace VariableAndExpression
 {
+    /*
+     枚举只能使用数字基本类型   
+     如未指定类型，默认为int类型
+    */
+    enum firstEnum:byte {
+        one = 10,
+        two,
+        three
+    }
     class Program
     {
         static void Main(string[] args)
@@ -83,10 +92,16 @@ namespace VariableAndExpression
             byteVar = unchecked((byte)longVar);
             Console.WriteLine("默认为unchecked,输出值为44，二进制高位丢失{0}", byteVar);
 
-            byteVar = checked((byte)longVar);
-            Console.WriteLine("System.OverflowException:算术运算导致溢出！{0}",byteVar);
+            //byteVar = checked((byte)longVar);
+            //Console.WriteLine("System.OverflowException:算术运算导致溢出！{0}",byteVar);
 
-
+            /*
+            枚举
+            */
+            Console.WriteLine(Convert.ToInt32(firstEnum.one));
+            //将string转为枚举值
+            firstEnum firstEnumTwo = (firstEnum)Enum.Parse(typeof(firstEnum), "two");
+            Console.WriteLine("将string转为枚举值{0}",firstEnumTwo);
 
         }
     }
