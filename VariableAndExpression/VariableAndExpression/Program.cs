@@ -117,6 +117,32 @@ namespace VariableAndExpression
             myRoute.enumVal = firstEnum.three;
 
             Console.WriteLine("使用结构数据类型enumValue:{0},distance:{1}", myRoute.enumVal,myRoute.distance);
+
+            /*
+            数组
+            */
+            //声明数组
+            int[] ints1 = {1,45,44,78};
+            const int intsLen = 2;
+            int[] ints2 = new int[intsLen];//数组长度必须为常量
+            int[] ints3 = new int[2] { 2,4};
+
+            //声明多维数组
+            int[,] table = new int[4,3];//与java的区别
+
+            //声明锯齿数组的三种方式
+            int[][] serration = new int[2][];
+            serration[0] = new int[2] { 1,1};
+            serration[1] = new int[3];
+            Console.WriteLine("锯齿数组：{0}",serration);
+
+            int[][] serration2 = new int[2][] { new int[] { 1,3},new int[] { 10} };
+
+            int[][] serration3 = { new int[] { 1, 3 }, new int[] { 10 } };
+
+
+
+
         }
     }
 }
