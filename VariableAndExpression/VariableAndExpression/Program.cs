@@ -35,8 +35,8 @@ namespace VariableAndExpression
             Console.ReadKey();
 
             //变量默认值
-            sbyte mysbyte;
-            bool mybool;
+            //sbyte mysbyte;
+            //bool mybool;
             //Console.Write(mybool); 与java不同基本类型必须初始化
 
             myStr = @"一成不变的
@@ -140,7 +140,20 @@ namespace VariableAndExpression
 
             int[][] serration3 = { new int[] { 1, 3 }, new int[] { 10 } };
 
+            /*
+            字符串处理
+            */
+            string msg = "c#-learn";
+            Console.WriteLine(msg.ToUpper());
+            Console.WriteLine(msg.ToCharArray()[0]);
 
+            string msgTrim = " c#-learn ";
+            Console.WriteLine(msgTrim.Trim());
+
+            Console.WriteLine("去掉开始空格{0}",msgTrim.TrimStart());
+            Console.WriteLine("去掉结束空格{0}",msgTrim.TrimEnd());
+            Console.WriteLine("{0}字符串左对齐", msgTrim.PadLeft(20));
+            Console.WriteLine("{0}字符串左对齐", msgTrim.PadLeft(20,'-'));
 
 
         }
@@ -151,7 +164,7 @@ namespace VariableAndExpression
 //using 则相当于java中的import
 namespace fabulous {
     class Test2 {
-        Test t;
+        //Test t;
     }
     
 }
