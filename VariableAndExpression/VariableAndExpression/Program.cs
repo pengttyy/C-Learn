@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using super.smashing;
+using System.Diagnostics;
 
 namespace VariableAndExpression
 {
@@ -224,7 +225,12 @@ namespace VariableAndExpression
             int pdelegateArg = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("委托函数输出:{0}", pdelegate(pdelegateArg));
 
+            //输出信息到output|调试视图
+            Debug.WriteLine("调试信息");
+            Debug.WriteLine("消息分类debug只能用于调试", "类别名称");
 
+            Trace.WriteLine("执行信息");
+            Trace.WriteLine("可用于生产版本", "信息类别");
         }
     }
 }
