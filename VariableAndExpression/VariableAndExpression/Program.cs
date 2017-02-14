@@ -23,6 +23,9 @@ namespace VariableAndExpression
     struct route {
         public firstEnum enumVal;
         public double distance;
+        public string routeName() {
+            return enumVal.ToString() + distance; 
+        }
     }
     class Program
     {
@@ -195,6 +198,9 @@ namespace VariableAndExpression
             //Console.WriteLine("输出参数:{0}", outArg);
             OutFunction(input3,out outArg);
             Console.WriteLine("输出参数:{0}", outArg);
+
+            //结构函数
+            Console.WriteLine("结构中可以使用函数{0}", myRoute.routeName());
 
         }
     }
