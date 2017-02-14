@@ -27,10 +27,20 @@ namespace VariableAndExpression
     class Program
     {
         //可变参数需要使用params关键字指定且可变参数必须是最后一个参数
-        static void special(bool flag,params int[] numbers)
+        static void Special(bool flag,params int[] numbers)
         {
 
         }
+
+        static void ValAdd(int input) {
+            input = input + 1;
+        }
+
+        static void ValAdd2(ref int input)
+        {
+            input = input + 1;
+        }
+
         static void Main(string[] args)
         {
             int myInt = 10;
@@ -161,7 +171,19 @@ namespace VariableAndExpression
             Console.WriteLine("{0}字符串左对齐", msgTrim.PadLeft(20,'-'));
 
             //可变参数函数
-            special(true,1, 12);
+            Special(true,1, 12);
+
+            //值参数
+            int input = 1;
+            Console.WriteLine("值参数前:{0}", input);
+            ValAdd(input);
+            Console.WriteLine("值参数后:{0}", input);
+
+            //引用参数
+            int input2 = 1;
+            Console.WriteLine("引用参数前:{0}", input2);
+            ValAdd2(ref input2);
+            Console.WriteLine("引用参数后:{0}", input2);
 
         }
     }
