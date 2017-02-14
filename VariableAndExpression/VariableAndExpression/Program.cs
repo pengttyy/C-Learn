@@ -35,8 +35,13 @@ namespace VariableAndExpression
 
         }
 
-        static void ValAdd(int input) {
-            input = input + 1;
+        static double ValAdd(int input) {
+            return input = input + 1;
+        }
+
+        static double ValDiv(int input)
+        {
+            return input = input/2;
         }
 
         static void ValAdd2(ref int input)
@@ -47,6 +52,8 @@ namespace VariableAndExpression
         static void OutFunction(int input, out int outArg) {
             outArg = input;
         }
+
+        delegate double ProcessDelegate(int arg);
 
         static void Main(string[] args)
         {
@@ -201,6 +208,22 @@ namespace VariableAndExpression
 
             //结构函数
             Console.WriteLine("结构中可以使用函数{0}", myRoute.routeName());
+            Console.ReadKey();
+
+
+            Console.WriteLine("委托函数test，输入\"ref\"执行加法操作，其它执行除法操作");
+            string key = Console.ReadLine();
+            ProcessDelegate pdelegate;
+            if (key.Equals("ref"))
+            {
+                pdelegate = new ProcessDelegate(ValAdd);
+            }
+            else {
+                pdelegate = new ProcessDelegate(ValDiv);
+            }
+            int pdelegateArg = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("委托函数输出:{0}", pdelegate(pdelegateArg));
+
 
         }
     }
