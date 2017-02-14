@@ -41,6 +41,10 @@ namespace VariableAndExpression
             input = input + 1;
         }
 
+        static void OutFunction(int input, out int outArg) {
+            outArg = input;
+        }
+
         static void Main(string[] args)
         {
             int myInt = 10;
@@ -184,6 +188,13 @@ namespace VariableAndExpression
             Console.WriteLine("引用参数前:{0}", input2);
             ValAdd2(ref input2);
             Console.WriteLine("引用参数后:{0}", input2);
+
+            //输出参数,与引用参数的区别：在函数外可以不进行初始化
+            int outArg;
+            int input3 = 1;
+            //Console.WriteLine("输出参数:{0}", outArg);
+            OutFunction(input3,out outArg);
+            Console.WriteLine("输出参数:{0}", outArg);
 
         }
     }
