@@ -26,6 +26,11 @@ namespace VariableAndExpression
     }
     class Program
     {
+        //可变参数需要使用params关键字指定且可变参数必须是最后一个参数
+        static void special(bool flag,params int[] numbers)
+        {
+
+        }
         static void Main(string[] args)
         {
             int myInt = 10;
@@ -155,6 +160,8 @@ namespace VariableAndExpression
             Console.WriteLine("{0}字符串左对齐", msgTrim.PadLeft(20));
             Console.WriteLine("{0}字符串左对齐", msgTrim.PadLeft(20,'-'));
 
+            //可变参数函数
+            special(true,1, 12);
 
         }
     }
